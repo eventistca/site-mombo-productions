@@ -1,0 +1,16 @@
+---
+// components
+import Faq from '@components/Faq/Faq.astro';
+// data
+import siteData from '@config/siteData.json';
+// layout
+import BaseLayout from '@layouts/BaseLayout.astro';
+import { Image } from 'astro:assets';
+---
+
+<BaseLayout
+  title="Frequently Asked Questions"
+  description="Frequently Asked Questions"
+>
+  <Faq />
+</BaseLayout>

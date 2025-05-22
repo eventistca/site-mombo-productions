@@ -1,0 +1,37 @@
+---
+// components
+import InstructorCard from '@components/InstructorCard/InstructorCard.astro';
+// data
+import siteData from '@config/siteData.json';
+// layout
+import BaseLayout from '@layouts/BaseLayout.astro';
+import { Image } from 'astro:assets';
+
+import { getCollection } from 'astro:content';
+
+const instructors = await getCollection('instructors');
+
+const sortedInstructors = instructors.sort((a, b) => {
+  if ((a.data.order ?? Infinity) < (b.data.order ?? Infinity)) {
+    return -1;
+  }
+  if ((a.data.order ?? Infinity) > (b.data.order ?? Infinity)) {
+    return 1;
+  }
+  return 0;
+});
+---
+
+<BaseLayout
+  title="Frequently Asked Questions"
+  description="Frequently Asked Questions"
+>
+  <section id="instructors" class="mx-auto max-w-3xl px-4 pt-24 md:pt-36">
+    <h2 class="h2 text-center text-pretty uppercase">Meet your instructors</h2>
+    {
+      sortedInstructors.map((instructor, index) => (
+        <InstructorCard instructor={instructor} flip={index % 2 === 1} />
+      ))
+    }
+  </section>
+</BaseLayout>

@@ -1,0 +1,28 @@
+---
+// components
+import InstructorCard from '@components/InstructorCard/InstructorCard.astro';
+// data
+import siteData from '@config/siteData.json';
+// layout
+import BaseLayout from '@layouts/BaseLayout.astro';
+import { Image } from 'astro:assets';
+import Contact from '@components/Contact/Contact.astro';
+
+import { getCollection } from 'astro:content';
+
+const instructors = await getCollection('instructors');
+
+const sortedInstructors = instructors.sort((a, b) => {
+  if ((a.data.order ?? Infinity) < (b.data.order ?? Infinity)) {
+    return -1;
+  }
+  if ((a.data.order ?? Infinity) > (b.data.order ?? Infinity)) {
+    return 1;
+  }
+  return 0;
+});
+---
+
+<BaseLayout title="Contact Us" description="Contact Us">
+  <Contact />
+</BaseLayout>

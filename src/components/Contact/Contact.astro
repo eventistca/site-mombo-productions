@@ -1,0 +1,53 @@
+---
+/**
+ * * Contact section for the website
+ */
+
+import ContactForm from '@components/Forms/ContactForm.astro';
+import { Image } from 'astro:assets';
+
+interface Props {
+  class?: string;
+}
+
+const { class: className } = Astro.props as Props;
+
+import ringsImage from '@assets/images/rings-min.jpg';
+---
+
+<section
+  id="contact"
+  class="mx-auto max-w-md scroll-mt-10 px-4 py-24 md:max-w-6xl md:py-36"
+  class:list={[className]}
+>
+  <h2 class="h2 md:px-12 lg:text-6xl">Contact Us</h2>
+  <div class="grid gap-y-10 md:grid-cols-2">
+    <div class="border-primary-300 pt-8 md:border-r md:pr-20 md:pl-12">
+      <p class="description mb-2">
+        Make sure to check out our <a
+          href="http://mambopro.com/frequently-asked-questions/"
+          >Frequently Asked Questions</a
+        > page for answers to the most common questions people have.
+      </p>
+      <p class="description">
+        <strong>Mambo Productions Latin Dance School</strong><br />
+        Contact David (School Director):<br />
+        <a href="mailto:david@mambopro.com">david@mambopro.com</a><br />
+        <a href="tel:403-710-5364">403-710-5364</a>
+      </p>
+
+      <!-- <div class="mx-auto mt-8 aspect-square overflow-hidden">
+        <Image
+          src={ringsImage}
+          alt="wedding rings"
+          width={450}
+          densities={[1.5, 2]}
+          class="h-full w-full object-cover"
+        />
+      </div> -->
+    </div>
+    <div class="md:pr-12 md:pl-20">
+      <ContactForm />
+    </div>
+  </div>
+</section>
