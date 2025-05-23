@@ -18,33 +18,33 @@ const navConfig: navItem[] = [
     dropdown: [
       {
         text: 'Schedule',
-        link: '/schedule',
+        link: '/site-mombo-productions/schedule',
       },
       {
         text: 'Class Descriptions',
-        link: '/class-descriptions',
+        link: '/site-mombo-productions/class-descriptions',
       },
       {
         text: 'Pricing',
-        link: '/pricing-packages',
+        link: '/site-mombo-productions/pricing-packages',
       },
       {
         text: 'FAQ',
-        link: '/frequently-asked-questions',
+        link: '/site-mombo-productions/frequently-asked-questions',
       },
       {
         text: 'Payment Policy',
-        link: '/payment-policy',
+        link: '/site-mombo-productions/payment-policy',
       },
       {
         text: 'Register Now',
-        link: '/register',
+        link: '/site-mombo-productions/register',
       },
     ],
   },
   {
     text: 'Instructors',
-    link: '/instructors',
+    link: '/site-mombo-productions/instructors',
   },
   // {
   //   text: 'Hire Us',
@@ -55,19 +55,19 @@ const navConfig: navItem[] = [
     dropdown: [
       {
         text: 'Contact',
-        link: '/contact-us',
+        link: '/site-mombo-productions/contact-us',
       },
       {
         text: 'Dance Team',
-        link: '/dance-team',
+        link: '/site-mombo-productions/dance-team',
       },
       {
         text: 'Gift Certificates',
-        link: '/gift-certificates',
+        link: '/site-mombo-productions/gift-certificates',
       },
       {
         text: 'Videos',
-        link: '/videos',
+        link: '/site-mombo-productions/videos',
       },
     ],
   },

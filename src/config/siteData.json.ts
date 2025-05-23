@@ -29,7 +29,7 @@ const siteData: SiteDataProps = {
 
   // default image for meta tags if the page doesn't have an image already
   defaultImage: {
-    src: '/images/mamboproductions-logo.png',
+    src: '/site-mombo-productions/images/mamboproductions-logo.png',
     alt: 'Mambo Productions logo',
   },
 };
