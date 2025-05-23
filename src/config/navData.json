@@ -1,0 +1,61 @@
+{
+  "nav": [
+    {
+      "type": "dropdown",
+      "text": "Classes",
+      "dropdown": [
+        {
+          "text": "Schedule",
+          "link": "/site-mombo-productions/schedule"
+        },
+        {
+          "text": "Class Descriptions",
+          "link": "/site-mombo-productions/class-descriptions"
+        },
+        {
+          "text": "Pricing",
+          "link": "/site-mombo-productions/pricing-packages"
+        },
+        {
+          "text": "FAQ",
+          "link": "/site-mombo-productions/frequently-asked-questions"
+        },
+        {
+          "text": "Payment Policy",
+          "link": "/site-mombo-productions/payment-policy"
+        },
+        {
+          "text": "Register Now",
+          "link": "/site-mombo-productions/register"
+        }
+      ]
+    },
+    {
+      "type": "link",
+      "text": "Instructors",
+      "link": "/site-mombo-productions/instructors"
+    },
+    {
+      "type": "dropdown",
+      "text": "About Us",
+      "dropdown": [
+        {
+          "text": "Contact",
+          "link": "/site-mombo-productions/contact-us"
+        },
+        {
+          "text": "Dance Team",
+          "link": "/site-mombo-productions/dance-team"
+        },
+        {
+          "text": "Gift Certificates",
+          "link": "/site-mombo-productions/gift-certificates"
+        },
+        {
+          "text": "Videos",
+          "link": "/site-mombo-productions/videos"
+        }
+      ]
+    }
+  ]
+}

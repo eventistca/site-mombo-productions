@@ -1,0 +1,14 @@
+{
+  "name": "Mambo Productions",
+  "title": "Mambo Productions - Teaching Calgary to Dance since 2003",
+  "description": "Mambo Productions is a dance studio in Calgary, Alberta. We offer a variety of dance classes for all ages and skill levels.",
+  "useViewTransitions": true,
+  "author": {
+    "name": "Mambo Productions",
+    "email": "info@mamboproductions.com"
+  },
+  "defaultImage": {
+    "src": "/site-mombo-productions/images/mamboproductions-logo.svg",
+    "alt": "Mambo Productions logo"
+  }
+}

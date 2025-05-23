@@ -36,6 +36,123 @@ collections:
               },
             ],
         }
+  - name: 'testimonials'
+    label: 'Testimonials'
+    folder: 'src/data/testimonials'
+    extension: md
+    create: true
+    path: '{{slug}}/index'
+    media_folder: ''
+    public_folder: ''
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Testimonial', name: 'testimonial', widget: 'markdown' }
+      - { label: 'Image', name: 'image', widget: 'image' }
+      - { label: 'Order', name: 'order', widget: 'number' }
+      - { label: 'Draft', name: 'draft', widget: 'boolean', required: false }
+
+  - name: 'otherPages'
+    label: 'Other Pages'
+    folder: 'src/data/otherPages'
+    extension: mdx
+    create: true
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Description', name: 'description', widget: 'markdown' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+
+  - name: 'frequentlyAskedQuestions'
+    label: 'FAQ'
+    folder: 'src/data/faq'
+    extension: md
+    identifier_field: question
+    create: true
+    fields:
+      - { label: 'Question', name: 'question', widget: 'string' }
+      - {
+          label: 'Order',
+          name: 'order',
+          widget: 'number',
+          default: 100,
+          value_type: int,
+        }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - { label: 'Draft', name: 'draft', widget: 'boolean', required: false }
+
+  - name: 'instructors'
+    label: 'Instructors'
+    folder: 'src/data/instructors'
+    extension: md
+    create: true
+    path: '{{slug}}/index'
+    media_folder: './'
+    identifier_field: name
+    fields:
+      - { label: 'Name', name: 'name', widget: 'string' }
+      - { label: 'Image', name: 'image', widget: 'image', required: false }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - {
+          label: 'Order',
+          name: 'order',
+          widget: 'number',
+          default: 100,
+          value_type: int,
+        }
+      - { label: 'Draft', name: 'draft', widget: 'boolean', required: false }
+
+  - name: settings
+    label: 'Settings'
+    files:
+      - name: nav
+        label: 'Nav'
+        file: src/config/navData.json
+        fields:
+          - label: 'Nav'
+            name: 'nav'
+            widget: 'list'
+            types:
+              - label: 'Dropdown'
+                name: dropdown
+                widget: object
+                fields:
+                  - { label: 'Text', name: 'text', widget: 'string' }
+                  - label: 'Dropdown'
+                    name: dropdown
+                    widget: list
+                    fields:
+                      - { label: 'Text', name: 'text', widget: 'string' }
+                      - { label: 'Link', name: 'link', widget: 'string' }
+              - label: 'Link'
+                name: link
+                widget: object
+                fields:
+                  - { label: 'Text', name: 'text', widget: 'string' }
+                  - { label: 'Link', name: 'link', widget: 'string' }
+      - name: siteData
+        label: 'Site Data'
+        file: src/config/siteData.json
+        fields:
+          - label: 'Name'
+            name: name
+            widget: string
+          - label: 'Title'
+            name: title
+            widget: string
+          - label: 'Description'
+            name: description
+            widget: markdown
+          - label: 'Author'
+            name: author
+            widget: object
+            fields:
+              - { label: 'Name', name: 'name', widget: 'string' }
+              - { label: 'Email', name: 'email', widget: 'string' }
+          - label: 'Default Image'
+            name: defaultImage
+            widget: object
+            fields:
+              - { label: 'Src', name: 'src', widget: 'image' }
+              - { label: 'Alt', name: 'alt', widget: 'string' }
 media_folder: 'src/assets/images' # Location where files will be stored in the repo
 public_folder: '@assets/images' # The src attribute for uploaded media
 backend:
