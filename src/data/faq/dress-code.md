@@ -1,5 +1,7 @@
 ---
 question: 'What should I wear?'
+order: 100
+draft: false
 ---
 
 **Dancewear**
