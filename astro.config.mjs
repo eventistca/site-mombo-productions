@@ -8,7 +8,8 @@ import icon from 'astro-icon'; // https://www.astroicon.dev/guides/upgrade/v1/
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://www.mambopro.com/',
+  site: 'https://eventistca.github.io/',
+  base: 'site-mombo-productions',
   integrations: [
     // example auto import component into blog post mdx files
     AutoImport({
