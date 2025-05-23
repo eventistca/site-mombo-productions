@@ -41,5 +41,4 @@ public_folder: '@assets/images' # The src attribute for uploaded media
 backend:
   name: github
   repo: eventistca/site-mombo-productions
-  auth_endpoint: oauth
-  automatic_deployments: true
+  base_url: https://sveltia-cms-auth.tiedye1.workers.dev/
